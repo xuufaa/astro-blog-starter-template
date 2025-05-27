@@ -2,30 +2,23 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+
+const SITE_TITLE = "太爱自由的主页";
+const SITE_DESCRIPTION = "技术与法律笔记，生活与成长分享";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, 欢迎来我的个人主页!</h1>
-
-
-			<p>
-				很高兴你来到这里！这是刘旭发的个人主页与博客，我会在这里分享技术笔记、学习经历和生活感悟。
-                                希望你在这里找到有用的内容，欢迎常来看看。
-
-			<p>
-
-
-				
-			</p>
-		</main>
-		<Footer />
-	</body>
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>欢迎来到我的主页</h1>
+      <p>你好，我是刘旭发。这是我的博客，记录一些技术探索、法律笔记与生活点滴。</p>
+      <p>内容持续更新中，欢迎常来看看 :)</p>
+    </main>
+    <Footer />
+  </body>
 </html>
