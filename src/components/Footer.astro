@@ -5,39 +5,33 @@ const today = new Date();
 <footer>
   <div class="footer-container">
     <p class="footer-title">&copy; <span id="year"></span> 刘旭发（Lau Xufa）</p>
-    <p class="footer-subtitle">All rights reserved.</p>
+    <p class="footer-subtitle">Lau Xufa, All rights reserved.</p>
+    
 
     <div class="social-links">
-      <a href="https://m.webtoo.ls/@astro" target="_blank" aria-label="Follow Astro on Mastodon">
+      <a href="https://m.webtoo.ls/@astro" target="_blank" aria-label="Mastodon">
         <!-- Mastodon SVG -->
-        <svg viewBox="0 0 16 16" width="28" height="28" fill="currentColor" aria-hidden="true">
-          <path d="..."></path>
-        </svg>
+        <svg viewBox="0 0 16 16" width="28" height="28" fill="currentColor"><path d="..."/></svg>
       </a>
-      <a href="https://twitter.com/astrodotbuild" target="_blank" aria-label="Follow Astro on Twitter">
-        <!-- Twitter SVG -->
-        <svg viewBox="0 0 16 16" width="28" height="28" fill="currentColor" aria-hidden="true">
-          <path d="..."></path>
-        </svg>
+      <a href="https://twitter.com/astrodotbuild" target="_blank" aria-label="Twitter">
+        <svg viewBox="0 0 16 16" width="28" height="28" fill="currentColor"><path d="..."/></svg>
       </a>
-      <a href="https://github.com/withastro/astro" target="_blank" aria-label="Go to Astro GitHub">
-        <!-- GitHub SVG -->
-        <svg viewBox="0 0 16 16" width="28" height="28" fill="currentColor" aria-hidden="true">
-          <path d="..."></path>
-        </svg>
+      <a href="https://github.com/withastro/astro" target="_blank" aria-label="GitHub">
+        <svg viewBox="0 0 16 16" width="28" height="28" fill="currentColor"><path d="..."/></svg>
       </a>
     </div>
   </div>
 </footer>
 
 <script>
+  // 自动更新年份
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 <style>
   footer {
-    background: linear-gradient(var(--gray-gradient));
-    color: rgb(var(--gray));
+    background: linear-gradient(var(--gray-gradient, #333, #111));
+    color: rgb(var(--gray, 240, 240, 240));
     text-align: center;
     padding: 3em 1em 6em 1em;
     font-family: 'Helvetica Neue', sans-serif;
@@ -51,28 +45,29 @@ const today = new Date();
   .footer-title {
     font-size: 1.2rem;
     font-weight: bold;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.3em;
   }
 
   .footer-subtitle {
     font-size: 0.95rem;
     color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 1.5em;
+    margin: 0.2em 0;
   }
 
   .social-links {
     display: flex;
     justify-content: center;
     gap: 1.2em;
+    margin-top: 1.5em;
   }
 
   .social-links a {
-    color: rgb(var(--gray));
+    color: inherit;
     transition: color 0.3s ease;
   }
 
   .social-links a:hover {
-    color: rgb(var(--gray-dark));
+    color: #fff;
   }
 
   svg {
