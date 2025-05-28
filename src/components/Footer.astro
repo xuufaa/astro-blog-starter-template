@@ -1,76 +1,23 @@
 ---
-const today = new Date();
+const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-  <div class="footer-container">
-    <p class="footer-title">&copy; <span id="year"></span> 刘旭发 </p>
-    <p class="footer-subtitle">Lau Xufa, All rights reserved.</p>
-    
+  <p>© {currentYear} 刘旭发（Lau Xufa）</p>
+  <p>版权所有  All rights reserved </p>
 
-    <div class="social-links">
-      <a href="https://m.webtoo.ls/@astro" target="_blank" aria-label="Mastodon">
-        <!-- Mastodon SVG -->
-        <svg viewBox="0 0 16 16" width="28" height="28" fill="currentColor"><path d="..."/></svg>
-      </a>
-      <a href="https://twitter.com/astrodotbuild" target="_blank" aria-label="Twitter">
-        <svg viewBox="0 0 16 16" width="28" height="28" fill="currentColor"><path d="..."/></svg>
-      </a>
-      <a href="https://github.com/withastro/astro" target="_blank" aria-label="GitHub">
-        <svg viewBox="0 0 16 16" width="28" height="28" fill="currentColor"><path d="..."/></svg>
-      </a>
-    </div>
-  </div>
+  <style>
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background-color: #f2f2f2;
+      color: #555;
+      font-size: clamp(12px, 1.2vw, 16px);
+      line-height: 1.6;
+    }
+
+    footer p {
+      margin: 0.2rem 0;
+    }
+  </style>
 </footer>
-
-<script>
-  // 自动更新年份
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-<style>
-  footer {
-    background: linear-gradient(var(--gray-gradient, #333, #111));
-    color: rgb(var(--gray, 240, 240, 240));
-    text-align: center;
-    padding: 3em 1em 6em 1em;
-    font-family: 'Helvetica Neue', sans-serif;
-  }
-
-  .footer-container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .footer-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-bottom: 0.3em;
-  }
-
-  .footer-subtitle {
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin: 0.2em 0;
-  }
-
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.2em;
-    margin-top: 1.5em;
-  }
-
-  .social-links a {
-    color: inherit;
-    transition: color 0.3s ease;
-  }
-
-  .social-links a:hover {
-    color: #fff;
-  }
-
-  svg {
-    vertical-align: middle;
-  }
-</style>
