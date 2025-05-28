@@ -11,6 +11,46 @@ const SITE_DESCRIPTION = "技术与法律笔记，生活与成长分享";
 <html lang="zh">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      html {
+        font-size: clamp(14px, 1.5vw, 18px);
+      }
+
+      body {
+        font-family: "Noto Sans SC", "Helvetica Neue", sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #333;
+        background-color: #fff;
+      }
+
+      main {
+        padding: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        font-size: clamp(28px, 4vw, 36px);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #111;
+      }
+
+      p {
+        font-size: clamp(16px, 1.6vw, 20px);
+        margin-bottom: 1rem;
+      }
+
+      footer {
+        text-align: center;
+        font-size: clamp(12px, 1.2vw, 16px);
+        color: #666;
+        padding: 2rem 1rem;
+        background-color: #f9f9f9;
+      }
+    </style>
   </head>
   <body>
     <Header />
